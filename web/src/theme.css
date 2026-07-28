@@ -1,0 +1,44 @@
+/* HeroUI v3 ships prebuilt CSS that itself imports Tailwind v4 (base + components + default theme). */
+@import "@heroui/styles";
+
+/* Design tokens from saleshandy_design.md.
+   Matter is commercial -> Inter (loaded in index.html) as the free geometric stand-in. */
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-primary: #275df5;
+  --color-secondary: #0b0b0b;
+  --color-ink: #0b0b0b;
+  --color-muted: #6b7280;
+  --color-line: #eeeeee;
+  --color-info: #dde7ff;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-feature-settings: "cv11", "ss01";
+  color: var(--color-ink);
+  background: #ffffff;
+}
+
+/* tighter headline tracking, matching the design's negative letter-spacing */
+.tracking-headline {
+  letter-spacing: -0.03em;
+}
+
+/* every enabled clickable gets a pointer; skip disabled controls */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+label[for],
+summary,
+select {
+  cursor: pointer;
+}

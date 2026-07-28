@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Third-party site — testimonial widget demo</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 48px 20px;
+        color: #1a1a2e;
+        background: #fafafa;
+      }
+      .fake-site {
+        border: 1px dashed #cbd5e1;
+        border-radius: 16px;
+        padding: 28px;
+        background: #fff;
+      }
+      h1 { font-size: 28px; }
+      .note { color: #64748b; font-size: 14px; line-height: 1.6; }
+      code { background: #eef2ff; padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+      hr { border: none; border-top: 1px solid #eee; margin: 32px 0; }
+    </style>
+  </head>
+  <body>
+    <div class="fake-site">
+      <h1>🌭 Frank's Hot Dogs</h1>
+      <p class="note">
+        This is a pretend third-party website that has <strong>nothing to do</strong> with the
+        testimonial app. It embeds approved testimonials with just two tags:
+      </p>
+      <p class="note">
+        <code>&lt;div id="testimonials"&gt;&lt;/div&gt;</code><br />
+        <code
+          >&lt;script src="http://localhost:4000/widget.js" data-target="testimonials"
+          data-accent="#275DF5" data-limit="6"&gt;&lt;/script&gt;</code
+        >
+      </p>
+
+      <hr />
+      <h2>What our customers say</h2>
+
+      <!-- the widget renders here -->
+      <div id="testimonials"></div>
+    </div>
+
+    <script
+      src="http://localhost:4000/widget.js"
+      data-target="testimonials"
+      data-accent="#275DF5"
+      data-limit="6"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+
+# runtime data / uploads (not source)
+server/data.db
+server/data.db-shm
+server/data.db-wal
+server/uploads/
+
+# os / editor
+.DS_Store
+*.log
